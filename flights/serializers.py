@@ -28,6 +28,12 @@ class UpdateBookingSerializer(serializers.ModelSerializer):
 		fields = ['date', 'passengers']
 
 
+class UpdateBookingnormaluserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = ['passengers']        
+
+
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
     class Meta:
